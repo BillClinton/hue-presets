@@ -1,0 +1,9 @@
+body {
+  background-color: #333;
+}
+.app {
+  background-color: #666;
+}
+.app .button {
+  margin: 10px 0;
+}

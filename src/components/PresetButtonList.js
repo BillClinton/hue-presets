@@ -6,15 +6,17 @@ const PresetButtonList = ({ presets, onPresetSelect }) => {
   const renderedList = presets.map(preset => {
     console.log("map", preset);
     return (
-      <PresetButton
-        key={preset.name}
-        presetName={preset.name}
-        onPresetSelect={onPresetSelect}
-      />
+      <div className="ui container">
+        <PresetButton
+          key={preset.name}
+          presetName={preset.name}
+          onPresetSelect={onPresetSelect}
+        />
+      </div>
     );
   });
 
-  return <div className="ui relaxed divided list">{renderedList}</div>;
+  return <div className="column">{renderedList}</div>;
 };
 
 export default PresetButtonList;
