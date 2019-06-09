@@ -1,8 +1,22 @@
 import React from "react";
+import PresetButtonList from "./PresetButtonList";
 
 class App extends React.Component {
   render() {
-    return <div>App</div>;
+    return (
+      <div>
+        <PresetButtonList
+          presets={[
+            {
+              name: "movies"
+            },
+            {
+              name: "bedtime"
+            }
+          ]}
+        />
+      </div>
+    );
   }
 }
 
