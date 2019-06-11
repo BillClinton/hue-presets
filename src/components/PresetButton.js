@@ -1,10 +1,13 @@
 import React from "react";
 
-const PresetButton = ({ presetName }) => {
+const PresetButton = ({ preset, onPresetSelect }) => {
   return (
-    <button className="massive fluid ui inverted blue button">
-      <i className="user icon" />
-      <span>{presetName}</span>
+    <button
+      onClick={() => onPresetSelect(preset)}
+      className="massive fluid ui inverted blue button"
+    >
+      <i className={preset.icon + " big icon"} style={{ marginBottom: 20 }} />
+      <span>{preset.name}</span>
     </button>
   );
 };
